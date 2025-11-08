@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ajay's Cafe</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <!-- <link rel="stylesheet" href="ajay.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="parent">
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Ajay's Cafe Logo">
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+            <a href="ajay.html" class="nav-link">HOME</a>
+            <a href="aboutus.html" class="nav-link">ABOUT US</a>
+            <a href="ourmenu.html" class="nav-link">OUR MENU</a>
+            <a href="#outlets" class="nav-link">Our Outlets</a>
+            <a href="#franchise" class="nav-link">Franchisee</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#careers" class="nav-link">Careers</a>
+            <a href="#blog" class="nav-link">Blog/News</a>
+            <a href="#contact" class="nav-link">Contact Us</a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+    </div>
+
+    <!-- Who We Are Section -->
+    <div class="who">
+        <div class="who-content">
+            <h2>Who Are We</h2>
+            <div class="who-text">
+                <p>At Ajay's, we pride ourselves on being a trusted and leading QSR chain with over 160 outlets across 42 cities as of 1st July 2024. Our mission is to serve food that is good, delicious, and accessible to all, ensuring every guest experiences great value for their money.</p>
+                <p>We are a dynamic team of young and energetic professionals who believe that passion, dedication, and commitment can turn dreams into reality. For us, success is not a destination but a journey. At Ajay's, we cherish our journey of delivering hygienic and value-driven cold coffee, a variety of burgers, pizzas and much more.</p>
+                <p>Our unwavering commitment to our mission defines our values. We prioritize quality ingredients, maintain clean and hygienic outlets, and provide prompt, consistent taste and service. This dedication builds trust with our guests and franchisees alike, ensuring that every interaction with Ajay's is one of reliability and satisfaction.</p>
+                <p>This is just the beginning of our story. We aspire to see new budding entrepreneurs grow with Ajay's. We are here to ignite an entrepreneurial wave in the Indian food sector and empower the Indian youth, fostering a community built on trust and excellence.</p>
+            </div>
+            <div class="founders">
+                <h3>Ajay & Jaideep Vasant Solanki</h3>
+                <h5>Founder Directors, Ajay's Good Food Pvt. Ltd.</h5>
+            </div>
+        </div>
+        <div class="who-image">
+            <img src="img/who-are-we.webp" alt="Ajay's Cafe Team">
+        </div>
+    </div>
+
+    <!-- Mission & Vision Section -->
+    <div class="mission">
+        <div class="mission-image">
+            <img src="img/mission-vision.webp" alt="Mission and Vision">
+        </div>
+        <div class="mission-content">
+            <div class="mission-item">
+                <h2>Mission</h2>
+                <p>To Serve Food That Is Good, Delicious And Accessible To All.</p>
+            </div>
+            <div class="mission-item">
+                <h2>Vision</h2>
+                <p>To Be The Largest QSR Chain In India by 2030</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="values">
+        <div class="values-image">
+            <img src="img/values.webp" alt="Our Values">
+        </div>
+        <div class="values-content">
+            <h2>Our Values</h2>
+            <ul class="values-list">
+                <li>We place the customer at the core of all that we do.</li>
+                <li>We are committed to our people.</li>
+                <li>We believe in our Systems and Processes.</li>
+                <li>We operate our business ethically.</li>
+                <li>We grow our business profitably.</li>
+                <li>We strive continually to improve.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Journey Section -->
+    <div class="journey">
+        <h2>Our journey so far.. a snapshot...</h2>
+        <div class="journey-image">
+            <img src="./img/20240412125203Ajays-Journey.webp" alt="Ajay's Journey Timeline">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg">
+            <div class="ajaysfot">
+                <h1>Follow Us On</h1>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="cafe">
+                <img src="img/logo.png" alt="Ajay's Cafe Logo">
+            </div>
+            <div class="button">
+                <a href="ajay.html">HOME</a>
+                <a href="aboutus.html">ABOUT US</a>
+                <a href="ourmenu.html">OUR MENU</a>
+                <a href="#outlets">Our Outlets</a>
+                <a href="#franchise">Franchisee</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#blog">Blog/News</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#nutrition">Nutrition</a>
+            </div>
+            <div class="word">
+                <p>At Ajay's we believe in providing GOOD FOOD FOR ALL. Join us in this effort in making Good Food available to all at affordable prices. In case you have any complaints regarding our products and services, please feel free to write us at care@ajays.co.in, we shall be happy to help.</p>
+            </div>
+            <hr>
+        </div>
+    </footer>
+
+    <script>
+// Updated JavaScript for navbar functionality
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

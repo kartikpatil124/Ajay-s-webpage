@@ -1,0 +1,609 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai", cursive, sans-serif;
+}
+
+:root {
+    --primary-color: #D20D20;
+    --secondary-color: #ff8d00;
+    --text-color: #737373;
+    --light-bg: #f9f9f9;
+    --dark-bg: #333;
+    --white: #fff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Section */
+.parent {
+    background:  url("./img/ajays-section.webp") center/cover no-repeat !important;
+    background-blend-mode: multiply !important; /* This creates the dark overlay effect */
+    height: 550px !important;
+    width: 100% !important;
+    border-radius: 0 0 30% 30% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    animation: fadeIn 1s ease-in-out !important;
+}
+
+/* Updated Navbar Styles */
+.navbar {
+    background-color: rgba(141, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background-color: rgba(141, 0, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 80px;
+}
+
+.navbar.scrolled .nav-container {
+    height: 70px;
+}
+
+.logo img {
+    height: 60px;
+    transition: var(--transition);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    .parent {
+    border-radius: 0px !important;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: rgba(141, 0, 0, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .navbar.scrolled .nav-menu {
+        top: 70px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 20px;
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+        .parent {
+    border-radius: 0px !important;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .nav-link {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* Who We Are Section */
+.who {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 5%;
+    animation: fadeInUp 1s ease;
+}
+
+.who-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.who h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.who h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.who-text p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.founders {
+    margin-top: 30px;
+}
+
+.founders h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.founders h5 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.who-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.who-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.who-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Mission & Vision Section */
+.mission {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 5%;
+    color: var(--white);
+    animation: fadeIn 1s ease 0.2s both;
+}
+
+.mission-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.mission-image img:hover {
+    transform: scale(1.02);
+}
+
+.mission-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.mission-item {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mission-item h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.mission-item h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background: var(--white);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission-item p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 5%;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+.values-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.values-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.values-image img:hover {
+    transform: scale(1.02);
+}
+
+.values-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.values h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.values h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.values-list {
+    list-style: none;
+}
+
+.values-list li {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.values-list li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Journey Section */
+.journey {
+    padding: 60px 5%;
+    text-align: center;
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+.journey h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.journey h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.journey-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/footer.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 5% 50px;
+    color: var(--white);
+}
+
+.ajaysfot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.ajaysfot h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.8rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.cafe {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cafe img {
+    height: 120px;
+    transition: var(--transition);
+}
+
+.cafe img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.button a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.button a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--secondary-color);
+}
+
+.word {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #a6a6a6;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .who h2, .mission-item h2, .values h2, .journey h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    
+    .link {
+        gap: 15px;
+    }
+    
+    .who, .mission, .values {
+        gap: 30px;
+        padding: 60px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .navbar img {
+        margin: 0 0 15px 0;
+    }
+    
+    .link {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .who h2, .mission-item h2, .values h2, .journey h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mission-item p {
+        font-size: 1.2rem;
+    }
+    
+    .values-list li {
+        font-size: 1rem;
+    }
+}
